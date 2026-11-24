@@ -1,0 +1,141 @@
+{
+  "Thing": {
+    "parent": null,
+    "description": "The most generic type of item.",
+    "supportedProperties": ["name", "description", "url", "image"]
+  },
+  "Organization": {
+    "parent": "Thing",
+    "description": "An organization such as a school, NGO, corporation, club, etc.",
+    "supportedProperties": ["legalName", "email", "telephone", "address"],
+    "required": [],
+    "requiredOneOf": [["name", "legalName"]],
+    "recommended": ["url"]
+  },
+  "Corporation": {
+    "parent": "Organization",
+    "description": "An organization that has been organized to operate a business.",
+    "supportedProperties": [],
+    "required": [],
+    "requiredOneOf": [["name", "legalName"]],
+    "recommended": ["url"]
+  },
+  "LocalBusiness": {
+    "parent": "Organization",
+    "description": "A particular physical business or branch of an organization.",
+    "supportedProperties": ["priceRange"],
+    "required": [],
+    "requiredOneOf": [["name", "legalName"]],
+    "recommended": ["address", "telephone"]
+  },
+  "PostalAddress": {
+    "parent": "Thing",
+    "description": "The mailing address.",
+    "supportedProperties": ["streetAddress", "addressLocality", "addressRegion", "postalCode", "addressCountry"],
+    "required": [],
+    "requiredOneOf": [],
+    "recommended": ["addressLocality", "addressCountry"]
+  },
+  "WebSite": {
+    "parent": "Thing",
+    "description": "A WebSite is a set of related web pages and other items typically served from a single web domain.",
+    "supportedProperties": [],
+    "required": [],
+    "requiredOneOf": [["name", "url"]],
+    "recommended": []
+  },
+  "WebPage": {
+    "parent": "Thing",
+    "description": "A web page. Every web page is implicitly assumed to be declared to be of type WebPage.",
+    "supportedProperties": ["headline", "breadcrumb"],
+    "required": [],
+    "requiredOneOf": [["name", "url", "headline"]],
+    "recommended": []
+  },
+  "Service": {
+    "parent": "Thing",
+    "description": "A service provided by an organization, e.g. delivery service, print services.",
+    "supportedProperties": ["provider", "serviceType", "offers"],
+    "required": [],
+    "requiredOneOf": [["name", "serviceType"]],
+    "recommended": ["provider"]
+  },
+  "Product": {
+    "parent": "Thing",
+    "description": "Any offered product or service.",
+    "supportedProperties": ["offers", "review", "aggregateRating"],
+    "required": ["name"],
+    "requiredOneOf": [["offers", "review", "aggregateRating"]],
+    "recommended": ["image", "description"]
+  },
+  "BreadcrumbList": {
+    "parent": "Thing",
+    "description": "A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name.",
+    "supportedProperties": ["itemListElement", "numberOfItems"],
+    "required": ["itemListElement"],
+    "requiredOneOf": [],
+    "recommended": [],
+    "propertyConstraints": {
+      "itemListElement": { "expectedCategory": "Array" }
+    }
+  },
+  "ListItem": {
+    "parent": "Thing",
+    "description": "An list item, e.g. a particular element in a list.",
+    "supportedProperties": ["item", "position"],
+    "required": ["position"],
+    "requiredOneOf": [],
+    "recommended": ["item"]
+  },
+  "FAQPage": {
+    "parent": "WebPage",
+    "description": "A FAQPage is a WebPage presenting one or more questions and answers.",
+    "supportedProperties": ["mainEntity"],
+    "required": ["mainEntity"],
+    "requiredOneOf": [],
+    "recommended": [],
+    "propertyConstraints": {
+      "mainEntity": { "expectedCategory": ["Array", "Object"] }
+    }
+  },
+  "Article": {
+    "parent": "Thing",
+    "description": "An article, such as a news article or piece of investigative report.",
+    "supportedProperties": ["headline", "author", "publisher", "datePublished", "dateModified"],
+    "required": ["headline"],
+    "requiredOneOf": [["author", "publisher"]],
+    "recommended": ["datePublished", "image"]
+  },
+  "NewsArticle": {
+    "parent": "Article",
+    "description": "A NewsArticle is an article whose content reports on current events in plain text or with media.",
+    "supportedProperties": [],
+    "required": ["headline"],
+    "requiredOneOf": [["author", "publisher"]],
+    "recommended": ["datePublished", "image"]
+  },
+  "BlogPosting": {
+    "parent": "Article",
+    "description": "A blog post.",
+    "supportedProperties": [],
+    "required": ["headline"],
+    "requiredOneOf": [["author", "publisher"]],
+    "recommended": ["datePublished", "image"]
+  },
+  "Person": {
+    "parent": "Thing",
+    "description": "A person (alive, dead, undead, or fictional).",
+    "supportedProperties": ["jobTitle", "worksFor", "email", "telephone"],
+    "required": ["name"],
+    "requiredOneOf": [],
+    "recommended": ["url"]
+  },
+  "ImageObject": {
+    "parent": "Thing",
+    "description": "An image file.",
+    "supportedProperties": ["contentUrl", "caption", "author"],
+    "required": [],
+    "requiredOneOf": [["contentUrl", "url"]],
+    "recommended": []
+  }
+}

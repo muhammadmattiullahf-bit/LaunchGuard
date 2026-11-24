@@ -1,0 +1,138 @@
+{
+  "name": {
+    "expectedTypes": ["Text"],
+    "description": "The name of the item."
+  },
+  "legalName": {
+    "expectedTypes": ["Text"],
+    "description": "The official name of the organization."
+  },
+  "url": {
+    "expectedTypes": ["URL", "Text"],
+    "description": "URL of the item."
+  },
+  "description": {
+    "expectedTypes": ["Text"],
+    "description": "A description of the item."
+  },
+  "headline": {
+    "expectedTypes": ["Text"],
+    "description": "Headline of the article."
+  },
+  "author": {
+    "expectedTypes": ["Person", "Organization", "Text", "Object"],
+    "description": "The author of this content."
+  },
+  "publisher": {
+    "expectedTypes": ["Organization", "Person", "Object"],
+    "description": "The publisher of the creative work."
+  },
+  "datePublished": {
+    "expectedTypes": ["Date", "Text"],
+    "description": "Date of first publication."
+  },
+  "dateModified": {
+    "expectedTypes": ["Date", "Text"],
+    "description": "The date on which the work was most recently modified."
+  },
+  "image": {
+    "expectedTypes": ["ImageObject", "URL", "Text", "Array", "Object"],
+    "description": "An image of the item."
+  },
+  "offers": {
+    "expectedTypes": ["Object", "Array"],
+    "description": "An offer to provide this item."
+  },
+  "review": {
+    "expectedTypes": ["Object", "Array"],
+    "description": "A review of the item."
+  },
+  "aggregateRating": {
+    "expectedTypes": ["Object"],
+    "description": "The overall rating."
+  },
+  "itemListElement": {
+    "expectedTypes": ["Array"],
+    "description": "For BreadcrumbList or ItemList, an ordered list of items."
+  },
+  "mainEntity": {
+    "expectedTypes": ["Array", "Object"],
+    "description": "Primary entity described in page."
+  },
+  "address": {
+    "expectedTypes": ["PostalAddress", "Text", "Object"],
+    "description": "Physical address."
+  },
+  "streetAddress": {
+    "expectedTypes": ["Text"],
+    "description": "The street address."
+  },
+  "addressLocality": {
+    "expectedTypes": ["Text"],
+    "description": "The locality in which the street address is."
+  },
+  "addressRegion": {
+    "expectedTypes": ["Text"],
+    "description": "The region in which the locality is."
+  },
+  "postalCode": {
+    "expectedTypes": ["Text"],
+    "description": "The postal code."
+  },
+  "addressCountry": {
+    "expectedTypes": ["Text"],
+    "description": "The country."
+  },
+  "telephone": {
+    "expectedTypes": ["Text"],
+    "description": "The telephone number."
+  },
+  "email": {
+    "expectedTypes": ["Text"],
+    "description": "Email address."
+  },
+  "provider": {
+    "expectedTypes": ["Organization", "Person", "Object"],
+    "description": "The service provider."
+  },
+  "serviceType": {
+    "expectedTypes": ["Text"],
+    "description": "The type of service."
+  },
+  "contentUrl": {
+    "expectedTypes": ["URL", "Text"],
+    "description": "Direct URL to media file."
+  },
+  "item": {
+    "expectedTypes": ["URL", "Text", "Object"],
+    "description": "The single item that results from this list element."
+  },
+  "position": {
+    "expectedTypes": ["Integer", "Text"],
+    "description": "The position of an item in a series or sequence."
+  },
+  "jobTitle": {
+    "expectedTypes": ["Text"],
+    "description": "The job title of the person."
+  },
+  "worksFor": {
+    "expectedTypes": ["Organization", "Object"],
+    "description": "Organizations that this person works for."
+  },
+  "priceRange": {
+    "expectedTypes": ["Text"],
+    "description": "The price range of the business."
+  },
+  "caption": {
+    "expectedTypes": ["Text"],
+    "description": "The caption for this object."
+  },
+  "numberOfItems": {
+    "expectedTypes": ["Integer"],
+    "description": "The number of items in an ItemList."
+  },
+  "breadcrumb": {
+    "expectedTypes": ["BreadcrumbList", "Text", "Object"],
+    "description": "A set of links that can establish a hierarchy between web pages."
+  }
+}

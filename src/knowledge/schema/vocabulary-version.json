@@ -1,0 +1,8 @@
+{
+  "vocabulary": "Schema.org",
+  "version": "28.1",
+  "releaseDate": "2024-10-15",
+  "specUrl": "https://schema.org/docs/releases.html#v28.1",
+  "license": "Creative Commons Attribution-ShareAlike License (version 3.0)",
+  "bundledHash": "sha256-schema-org-v28.1-curated"
+}

@@ -1,0 +1,34 @@
+{
+  "Text": {
+    "category": "primitive",
+    "description": "Textual string value"
+  },
+  "URL": {
+    "category": "primitive",
+    "description": "Uniform Resource Locator string"
+  },
+  "Boolean": {
+    "category": "primitive",
+    "description": "Boolean true or false"
+  },
+  "Integer": {
+    "category": "primitive",
+    "description": "Integer number"
+  },
+  "Float": {
+    "category": "primitive",
+    "description": "Floating point number"
+  },
+  "Date": {
+    "category": "primitive",
+    "description": "ISO 8601 date or date-time string"
+  },
+  "Array": {
+    "category": "structural",
+    "description": "List of values or entities"
+  },
+  "Object": {
+    "category": "structural",
+    "description": "Nested entity object"
+  }
+}

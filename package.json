@@ -1,0 +1,37 @@
+{
+  "name": "launchguard",
+  "version": "0.1.0",
+  "description": "Local-first static audit tool for Next.js production-readiness",
+  "type": "module",
+  "main": "./src/core/index.ts",
+  "bin": {
+    "launchguard": "./bin/launchguard.js"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/**/*.test.ts",
+    "test:unit": "node --test tests/unit/**/*.test.ts",
+    "test:adversarial": "node --test tests/adversarial/**/*.test.ts",
+    "test:fixtures": "node --test tests/fixtures/**/*.test.ts",
+    "launchguard": "node bin/launchguard.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2"
+  },
+  "keywords": [
+    "nextjs",
+    "audit",
+    "seo",
+    "security",
+    "production-readiness",
+    "static-analysis",
+    "sarif"
+  ],
+  "author": "LaunchGuard Contributors",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
